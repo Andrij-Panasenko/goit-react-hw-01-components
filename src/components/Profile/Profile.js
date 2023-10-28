@@ -16,16 +16,16 @@ export const Profile = ({ user: { username, tag, location, avatar, stats } }) =>
 
       <StatusList>
         <StatusListItem>
-          <StatusLabel className="label">Followers</StatusLabel>
-          <b className="quantity">{stats.followers}</b>
+          <StatusLabel >Followers</StatusLabel>
+          <b >{stats.followers}</b>
         </StatusListItem>
         <StatusListItem>
-          <StatusLabel className="label">Views</StatusLabel>
-          <b className="quantity">{stats.views}</b>
+          <StatusLabel >Views</StatusLabel>
+          <b >{stats.views}</b>
         </StatusListItem>
         <StatusListItem>
-          <StatusLabel className="label">Likes</StatusLabel>
-          <b className="quantity">{stats.likes}</b>
+          <StatusLabel >Likes</StatusLabel>
+          <b >{stats.likes}</b>
         </StatusListItem>
       </StatusList>
     </ProfileWrapper>
