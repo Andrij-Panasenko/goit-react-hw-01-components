@@ -6,16 +6,16 @@ export const ProfileWrapper = styled.div`
    align-items: center;
    width: 300px;
    margin: 0 auto;
-   padding: 20px;
-   background-color: #f6f8fa; 
+   padding: ${p => p.theme.spacing(5)};
+   background-color: ${p => p.theme.colors.profileBcgColor}; 
 `;
 
 export const Description = styled.div`
    display: inline-flex;
    flex-direction: column;
    align-items: center;
-   gap: 10px;
-   margin-bottom: 30px;
+   gap: ${p => p.theme.spacing(3)};
+   margin-bottom: ${p => p.theme.spacing(7)};
 `;
 
 export const Image = styled.img`
@@ -23,23 +23,23 @@ export const Image = styled.img`
 `;
 
 export const UserInfo = styled.p`
-   color: #00000085;
+   color: ${p => p.theme.colors.profileLightTextColor};
 `;
 
 export const StatusList = styled.ul`
    display: flex;
-   gap: 10px;
-   padding: 10px;
+   gap: ${p => p.theme.spacing(2)};
+   padding: ${p => p.theme.spacing(2)};
 `;
 
 export const StatusListItem = styled.li`
    display: flex;
    flex-direction: column;
    align-items: center;
-   gap: 5px;
-   padding: 5px;
+   gap: ${p => p.theme.spacing(1)};
+   padding: ${p => p.theme.spacing(1)};
 `;
 
 export const StatusLabel = styled.span`
-   color: #00000085;
+   color: ${p => p.theme.colors.profileLightTextColor};
 `;
