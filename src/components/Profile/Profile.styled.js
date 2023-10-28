@@ -7,6 +7,7 @@ export const ProfileWrapper = styled.div`
    width: 300px;
    margin: 0 auto;
    padding: 20px;
+   background-color: #f6f8fa; 
 `;
 
 export const Description = styled.div`

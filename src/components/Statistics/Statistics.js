@@ -1,21 +1,22 @@
 import data from './data.json'
+import { StatisticsSection, StatTitle, StatList, ListItem, StatLabel } from './Statistics.styled';
 
 export const Statistics = (props) => {
   return (
-    <section className="statistics">
-      <h2 className="title">{props.title}</h2>
+    <StatisticsSection>
+      <StatTitle>{props.title}</StatTitle>
 
-      <ul>
+      <StatList>
         {data.map(item => {
           return (
-            <li className="item" key={item.id}>
-              <span className="label">{item.label}</span>
-              <span className="percentage">{item.percentage}%</span>
-            </li>
+            <ListItem key={item.id}>
+              <StatLabel>{item.label}</StatLabel>
+              <span>{item.percentage}%</span>
+            </ListItem>
           )
         })}
-      </ul>
-    </section>
+      </StatList>
+    </StatisticsSection>
   )
 };
 
