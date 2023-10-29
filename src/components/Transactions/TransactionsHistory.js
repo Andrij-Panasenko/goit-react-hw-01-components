@@ -1,7 +1,6 @@
-import transactions from "./transactions.json";
 import { Table, TableHeadRow, TableHeadItem, TableBodyRow, TableBodyData } from "./TransactionsHistory.styled";
 
-export const TransactionsHistory = () => {
+export const TransactionsHistory = ({transactions}) => {
    return (
 <Table >
   <thead>
