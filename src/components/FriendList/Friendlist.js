@@ -1,7 +1,6 @@
-import friends from './friends.json';
 import { Friendlist, ListItem, OnlineStatus, Avatar, FriendName } from './Friendlist.styled';
 
-export const FriendList = () => { 
+export const FriendList = ({friends}) => { 
    return (
       <Friendlist>
          {friends.map(friend => {
