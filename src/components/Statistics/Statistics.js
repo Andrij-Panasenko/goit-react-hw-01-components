@@ -1,17 +1,15 @@
-import data from './data.json'
 import { StatisticsSection, StatTitle, StatList, ListItem, StatLabel } from './Statistics.styled';
 
-export const Statistics = (props) => {
+export const Statistics = ( {stats, title}) => {
   return (
     <StatisticsSection>
-      <StatTitle>{props.title}</StatTitle>
-
+      {title ? <StatTitle>{title}</StatTitle> : null}
       <StatList>
-        {data.map(item => {
+        {stats.map(stat => {
           return (
-            <ListItem key={item.id}>
-              <StatLabel>{item.label}</StatLabel>
-              <span>{item.percentage}%</span>
+            <ListItem key={stat.id}>
+              <StatLabel>{stat.label}</StatLabel>
+              <span>{stat.percentage}%</span>
             </ListItem>
           )
         })}
@@ -19,5 +17,3 @@ export const Statistics = (props) => {
     </StatisticsSection>
   )
 };
-
-
